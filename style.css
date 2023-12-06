@@ -1,0 +1,43 @@
+.page {
+	display: none;
+	margin: 50px auto;
+	padding: 20px;
+	width: 980px;
+	height: 650px;
+	border: 1px solid #ccc;
+	text-align: center;
+	padding-top: 100px;
+}
+
+.page.active {
+	display: block;
+}
+
+button {
+	margin-top: 20px;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0069d9;
+}
+
+.s1{
+	margin: 0 auto;
+	background: url(../img/QQ图片20231206113055.jpg) no-repeat;
+	background-repeat: repeat;
+	background-size: cover;
+}
+
+.s2{
+	margin: 0 auto;
+	background: url(../img/QQ图片20231206113045.jpg) no-repeat;
+	background-repeat: repeat;
+	background-size: cover;
+}
+
