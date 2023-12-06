@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>留言板</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+			}
+
+			#box {
+				width: 400px;
+				height: 300px;
+				border: 1px solid gray;
+				text-align: center;
+				padding: 20px;
+				box-sizing: border-box;
+				margin: 0 auto;
+			}
+
+			h3 {
+				margin-top: 0;
+			}
+
+			#innerBox {
+				width: 100%;
+				height: 150px;
+				border: 1px gray dashed;
+				margin: 20px auto;
+				overflow-y: auto;
+				padding: 10px;
+				box-sizing: border-box;
+			}
+
+			ul {
+				text-align: left;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			li {
+				margin-bottom: 10px;
+			}
+
+			textarea {
+				width: 100%;
+				height: 60px;
+				border: 1px solid gray;
+				padding: 5px;
+				box-sizing: border-box;
+				margin-bottom: 10px;
+			}
+
+			#submitButton {
+				padding: 5px 10px;
+				background-color: #4CAF50;
+				color: white;
+				border: none;
+				cursor: pointer;
+			}
+
+			#submitButton:hover {
+				background-color: #45a049;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<h3>留言板</h3>
+			<div id="innerBox"></div>
+			<ul>
+				<li>Hello</li>
+			</ul>
+			<textarea id="messageInput" placeholder="请编辑您的留言"></textarea>
+			<button id="submitButton">发布留言</button>
+		</div>
+		<script>
+			var submitButton = document.querySelector('#submitButton');
+			var messageInput = document.querySelector('#messageInput');
+			var messageList = document.querySelector('ul');
+
+			submitButton.onclick = function() {
+				if (messageInput.value === '') {
+					alert('您没有输入内容');
+					return false;
+				} else {
+					var li = document.createElement('li');
+					li.innerHTML = messageInput.value;
+					messageList.insertBefore(li, messageList.firstChild);
+					messageInput.value = '';
+				}
+			}
+		</script>
+	</body>
+</html>
